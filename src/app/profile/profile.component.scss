@@ -1,0 +1,24 @@
+$margin-bottom-15: 15px;
+
+.profile {
+  .avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    margin-left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .links {
+    border: 1px solid;
+    padding: 10px 0 10px 10px;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: $margin-bottom-15;
+}

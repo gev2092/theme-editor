@@ -1,0 +1,24 @@
+<div class="profile">
+ <div class="avatar">
+   <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg" alt="profile-picture">
+   <select name="" id="" *ngIf="isEditMode">
+     <option value="border-radius: 0">square</option>
+     <option value="border-radius: 50%">circle</option>
+   </select>
+ </div>
+  <div class="name margin-bottom">Nick Gerard  <input type="color" value="#ff0000" *ngIf="isEditMode"></div>
+  <div class="bio margin-bottom">Building Norby <input type="color" value="#ff0000" *ngIf="isEditMode"></div>
+  <div class="links margin-bottom">
+    <a href="http://google.com" target="_blank">Website</a>
+
+    <span *ngIf="isEditMode">
+      border radius - <input type="number" min="0">
+      background color - <input type="color" value="#ff0000">
+      color - <input type="color" value="#ff0000">
+    </span>
+  </div>
+</div>
+
+<button (click)="handleClickEdit()" *ngIf="!isEditMode">Edit</button>
+<button (click)="handleClickCancel()" *ngIf="isEditMode">Cancel</button>
+<button (click)="handleClickSave()" *ngIf="isEditMode">Save</button>
