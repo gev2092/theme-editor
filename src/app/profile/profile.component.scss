@@ -16,6 +16,12 @@ $margin-bottom-15: 15px;
   .links {
     border: 1px solid;
     padding: 10px 0 10px 10px;
+    display: flex;
+
+    a {
+      padding: 5px;
+      margin-right: 10px;
+    }
   }
 }
 

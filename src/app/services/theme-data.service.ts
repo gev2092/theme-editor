@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
+import { ITheme } from '../interfaces/theme.interface';
 import { IDbTheme } from '../interfaces/db-theme.interface';
 import { environment } from '../../environments/environment';
 import { IThemeResult } from '../interfaces/theme-result.interface';
@@ -26,8 +27,8 @@ export class ThemeDataService {
     return this.httpClient.get<IDbTheme>(`${this.baseUrl}/${id}`);
   }
 
-  public getDefault(): Observable<IDbTheme> {
-    return this.httpClient.get<IDbTheme>(`${this.baseUrl}/default`);
+  public getDefault(): Observable<ITheme> {
+    return this.httpClient.get<ITheme>(`${this.baseUrl}/default`);
   }
 
   public update(id: number | undefined, theme: IDbTheme): Observable<IDbTheme> {
